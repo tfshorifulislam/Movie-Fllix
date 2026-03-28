@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import logo from '../../assets/plex-167.png'
-const NavBar = ({ section, setSection }) => {
+const NavBar = ({ section, setSection , setSelectedCart }) => {
 
     const menuItems = ['Home', 'Movies', 'TV Shows']
 
     const handleMenu = (item)=>{
         setSection(item)
+        setSelectedCart(false)
     }
     return (
         <div className=''>

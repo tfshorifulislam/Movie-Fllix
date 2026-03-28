@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
-const MovieCard = ({ movie, setCart, cart, cartsData, setCartsData }) => {
+const MovieCard = ({ movie, cartsData, setCartsData }) => {
     const [addCart, setAddCart] = useState(false)
     const handleCard = () => {
         setAddCart(true)
-        setCart(cart + 1)
+        setCartsData(cartsData + 1)
         setCartsData([...cartsData, movie])
         toast.info(`${movie.title} Add Successfully`)
     }

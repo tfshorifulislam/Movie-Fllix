@@ -24,7 +24,7 @@ function App() {
   // console.log(selectCarts)
   return (
     <div className='max-w-480'>
-      <Hero section={section} setSection={setSection} />
+      <Hero section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
 
       {!selectCarts && section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
       {!selectCarts && section === 'Movies' && <MovieSection />}
