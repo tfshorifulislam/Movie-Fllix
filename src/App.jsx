@@ -26,10 +26,10 @@ function App() {
     <div className='max-w-480'>
       <Hero section={section} setSection={setSection} />
 
-      {section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
-      {section === 'Movies' && <MovieSection />}
-      {section === 'TV Shows' && <TvShowsSection />}
-      {selectCarts === true && <SelectCarts cartsData={cartsData} />}
+      {!selectCarts && section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
+      {!selectCarts && section === 'Movies' && <MovieSection />}
+      {!selectCarts && section === 'TV Shows' && <TvShowsSection />}
+      {selectCarts === true && <SelectCarts cartsData={cartsData} setSection={setSection} setSelectedCart={setSelectedCart} />}
 
 
     </div>
