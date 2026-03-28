@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return (
         <div className=''>
-            <div className='flex justify-between items-center mt-5 w-full'>
+            <div className='flex justify-between items-center pt-3 md:pt-8  w-11/12 mx-auto'>
                 <div className='flex w-8 h-8'>
                     <img src={logo} alt="" />
                 </div>
@@ -18,8 +18,9 @@ const NavBar = () => {
                                 menuItems.map(item =>
                                     <li key={item}>
                                         <button onClick={() => setActive(item)}
-                                            className={`px-5 py-2 rounded-full cursor-pointer duration-1000 ${active === item ?
-                                                'bg-purple-700 text-white'
+                                            className={` px-5 py-2 rounded-full cursor-pointer duration-1000 text-white
+                                                ${active === item ?
+                                                'bg-purple-700  font-bold'
                                                 : ''}`}
                                         >{item}
                                         </button>
