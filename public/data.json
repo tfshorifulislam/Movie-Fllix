@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Dhurandhar The Revenge",
+    "description": "The epic saga of Dhurandhar unfolds as revenge drives every move.",
+    "price": 9.99,
+    "image": "https://i.ibb.co.com/mFMjwSR8/Dhurandhar-The-Revenge.avif",
+    "status": "popular"
+  },
+  {
+    "id": 2,
+    "title": "Gata salvaje",
+    "description": "Gata salvaje explores wild adventures and untamed spirits in a magical world.",
+    "price": 9.99,
+    "image": "https://i.ibb.co.com/2Y0ryYjF/Gata-salvaje.avif",
+    "status": "favourite"
+  },
+  {
+    "id": 3,
+    "title": "In the Heat of the Night",
+    "description": "In the Heat of the Night brings suspense and mystery under the night sky.",
+    "price": 0,
+    "image": "https://i.ibb.co/R4HFYdPB/In-the-Heat-of-the-Night.avif",
+    "status": "mostwanted"
+  },
+  {
+    "id": 4,
+    "title": "Kon Tiki",
+    "description": "Kon Tiki embarks on an epic ocean journey filled with danger and discovery.",
+    "price": 9.99,
+    "image": "https://i.ibb.co/F406GDYX/Kon-Tiki.avif",
+    "status": "popular"
+  },
+  {
+    "id": 5,
+    "title": "Peaky Blinders: The Immortal Man",
+    "description": "Peaky Blinders: The Immortal Man tells a tale of power, crime, and relentless ambition.",
+    "price": 9.99,
+    "image": "https://i.ibb.co/Ng21QHnz/Peaky-Blinders-The-Immortal-Man.avif",
+    "status": "favourite"
+  },
+  {
+    "id": 6,
+    "title": "Planet of the Apes",
+    "description": "Planet of the Apes reveals a world where apes rise and humans struggle for survival.",
+    "price": 0,
+    "image": "https://i.ibb.co/XxQ2wzk9/Planet-of-the-Apes.avif",
+    "status": "mostwanted"
+  },
+  {
+    "id": 7,
+    "title": "Saints & Sinners",
+    "description": "Saints & Sinners explores the clash between virtue and vice in a dangerous world.",
+    "price": 9.99,
+    "image": "https://i.ibb.co/v4DHfsFG/Saints-Sinners.avif",
+    "status": "popular"
+  },
+  {
+    "id": 8,
+    "title": "Scream 7",
+    "description": "Scream 7 delivers chilling horror and suspense that will keep you on edge.",
+    "price": 9.99,
+    "image": "https://i.ibb.co/dwxLd72J/Scream-7.avif",
+    "status": "favourite"
+  },
+  {
+    "id": 9,
+    "title": "Send Help",
+    "description": "Send Help follows a thrilling story of survival, danger, and unexpected twists.",
+    "price": 0,
+    "image": "https://i.ibb.co/WW4ZkhbZ/Send-Help.avif",
+    "status": "mostwanted"
+  },
+  {
+    "id": 10,
+    "title": "Sherlock Holmes (1954)",
+    "description": "Sherlock Holmes (1954) unravels intricate mysteries with keen deduction and wit.",
+    "price": 9.99,
+    "image": "https://i.ibb.co/zHsGBfzp/Sherlock-Holmes-1954.avif",
+    "status": "popular"
+  }
+]
