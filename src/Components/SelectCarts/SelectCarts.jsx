@@ -1,4 +1,6 @@
 import React from 'react';
+import SelectedCardMap from '../SelectedCardMap/SelectedCardMap';
+import { GrRadialSelected } from "react-icons/gr";
 
 const SelectCarts = ({ cartsData, setSection, setSelectedCart }) => {
     return (
@@ -9,15 +11,18 @@ const SelectCarts = ({ cartsData, setSection, setSelectedCart }) => {
                     (<div className='flex flex-col justify-center items-center my-20'>
                         <p className='font-bold text-5xl mt-28'>Your cart is empty!</p>
                         <p className='font-medium text-2xl mt-5 text-purple-700 animate-pulse btn'
-                        onClick={()=>{setSection('Home'), setSelectedCart(false)} }>
+                            onClick={() => { setSection('Home'), setSelectedCart(false) }}>
                             Go to Home page
                         </p>
 
                     </div>)
-                    : cartsData.map(i =>
-                        <div key={i.id}>
-                            <h1>{i.title}</h1>
-                        </div>)
+                    : <div>
+                        <div className='flex items-center gap-5 w-11/12 mx-auto mt-10 text-2xl md:text-4xl font-bold'>
+                            Your Selected card <GrRadialSelected className='text-purple-700 animate-pulse' />
+
+                        </div>
+                        <SelectedCardMap cartsData={cartsData} />
+                    </div>
             }
         </div>
     );
