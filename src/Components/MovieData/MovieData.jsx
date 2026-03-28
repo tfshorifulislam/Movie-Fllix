@@ -3,7 +3,7 @@ import { CiShoppingCart } from 'react-icons/ci';
 import { FaFire } from 'react-icons/fa';
 import MovieCard from '../MovieCard/MovieCard';
 
-const MovieData = ({ movieDataRes }) => {
+const MovieData = ({ movieDataRes, cartsData, setCartsData, selectCarts, setSelectedCart }) => {
 
     const [cart, setCart] = useState(0)
 
@@ -16,14 +16,15 @@ const MovieData = ({ movieDataRes }) => {
                     <h1>Trending Now</h1>
                     <FaFire className='text-purple-700 animate-pulse' />
                 </div>
-                <div className='relative btn'>
+                <div className='relative btn'
+                    onClick={ ()=> setSelectedCart(true) }>
                     <CiShoppingCart className='text-4xl' />
-                    <div class="badge bg-purple-700 text-white absolute right-10 -top-3">{cart}</div>
+                    <div className="badge bg-purple-700 text-white absolute right-10 -top-3">{cart}</div>
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {
-                    allMovieData.map(movie => <MovieCard movie={movie} setCart={setCart} cart ={cart} /> )
+                    allMovieData.map(movie => <MovieCard key={movie.id} movie={movie} setCart={setCart} cart={cart} cartsData={cartsData} setCartsData={setCartsData} />)
                 }
             </div>
         </div>
