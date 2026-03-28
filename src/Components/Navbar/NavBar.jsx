@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import logo from '../../assets/plex-167.png'
-const NavBar = () => {
-    const [active, setActive] = useState('Home')
+const NavBar = ({ section, setSection }) => {
 
     const menuItems = ['Home', 'Movies', 'TV Shows']
 
+    const handleMenu = (item)=>{
+        setSection(item)
+    }
     return (
         <div className=''>
             <div className='flex justify-between items-center pt-3 md:pt-8  w-11/12 mx-auto'>
@@ -17,11 +19,12 @@ const NavBar = () => {
                             {
                                 menuItems.map(item =>
                                     <li key={item}>
-                                        <button onClick={() => setActive(item)}
+                                        <button
+                                        onClick={() => handleMenu(item) }
                                             className={` px-5 py-2 rounded-full cursor-pointer duration-1000 text-white
-                                                ${active === item ?
-                                                'bg-purple-700  font-bold'
-                                                : ''}`}
+                                                ${section === item ?
+                                                    'bg-purple-700  font-bold'
+                                                    : ''}`}
                                         >{item}
                                         </button>
                                     </li>)

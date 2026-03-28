@@ -1,13 +1,13 @@
 import React from 'react';
 import bg from '../../assets/hero-bg.jpg'
 import NavBar from '../Navbar/NavBar';
-const Hero = () => {
+const Hero = ({section, setSection}) => {
     return (
         <div>
             <div className='w-full h-screen relative'
                 style={{ backgroundImage: `url(${bg})` }}>
                 <div className='z-20 relative'>
-                     <NavBar />
+                     <NavBar section={section} setSection={setSection} />
                 </div>
                 <div className="absolute z-10 inset-0 bg-linear-to-t from-black flex flex-col justify-center items-center">
                     <h1 className='text-white text-center font-bold md:font-black text-2xl md:text-7xl md:leading-20 rounded-2xl md:rounded-4xl'>
