@@ -39,7 +39,7 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
                                     : 'Add to Cart'
                             }
                         </button>
-                        <p className='font-bold py-2 px-3 rounded-md border'>Price: {movie.price}</p>
+                        <p className='font-bold py-2 px-3 rounded-md border'>Download: ${movie.price}</p>
                     </div>
                 </div>
             </div>
