@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHandPointDown } from "react-icons/fa";
+
 const TvShowsSection = ({ setSection }) => {
     return (
         <div className='flex justify-center items-center h-screen flex-col text-center'>
