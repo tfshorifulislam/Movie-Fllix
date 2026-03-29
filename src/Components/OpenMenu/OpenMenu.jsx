@@ -4,15 +4,15 @@ const OpenMenu = ({ menuItems, setOpenMenu, handleMenu, openMenu }) => {
     
     return (
         <div>
-            <ul className='flex flex-col gap-3'>
+            <ul className='flex flex-col gap-3 text-left'>
                 {
                     menuItems.map(i =>
                         <li key={i} className='text-right'>
-                            <button
+                            <span
                                 onClick={() => {handleMenu(i) , setOpenMenu(false)}
                                     
-                                } className='btn bg-transparent border-none'>{i}
-                            </button>
+                                } className='btn bg-transparent border-none text-left'>{i}
+                            </span>
                         </li>)
                 }
             </ul>

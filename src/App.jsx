@@ -27,8 +27,8 @@ function App() {
       <Hero section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
 
       {!selectCarts && section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
-      {!selectCarts && section === 'Movies' && <MovieSection />}
-      {!selectCarts && section === 'TV Shows' && <TvShowsSection />}
+      {!selectCarts && section === 'Movies' && <MovieSection setSection={setSection} />}
+      {!selectCarts && section === 'TV Shows' && <TvShowsSection setSection={setSection} />}
       {selectCarts === true && <SelectCarts cartsData={cartsData} setSection={setSection} setSelectedCart={setSelectedCart} />}
 
 

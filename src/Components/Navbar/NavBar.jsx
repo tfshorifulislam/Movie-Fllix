@@ -45,7 +45,7 @@ const NavBar = ({ section, setSection, setSelectedCart }) => {
                             className='text-white text-4xl cursor-pointer btn bg-transparent border-none shadow-none md:hidden'
                         />
                         <div
-                            className={`py-10 px-5 bg-white rounded-2xl md:hidden absolute right-7 transition-all duration-1000
+                            className={`py-10 px-5 bg-white text-left rounded-2xl md:hidden absolute right-7 transition-all duration-1000
                              ${openMenu ?
                                     'top-20 opacity-100'
                                     : '-top-40 opacity-0'}`
