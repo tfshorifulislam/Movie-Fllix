@@ -37,7 +37,7 @@ const NavBar = ({ section, setSection, setSelectedCart }) => {
                             }
                         </ul>
                     </div>
-                    <div className='flex items-center gap-5'>
+                    <div className='flex items-center'>
                         <button className="btn btn-neutral bg-purple-600 border-none ">Sign In</button>
 
                         <IoMenu
