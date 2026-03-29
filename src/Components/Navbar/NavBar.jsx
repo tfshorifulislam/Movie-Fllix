@@ -3,9 +3,8 @@ import logo from '../../assets/logo 3.png'
 import { IoMenu } from "react-icons/io5";
 import OpenMenu from '../OpenMenu/OpenMenu';
 
-const NavBar = ({ section, setSection, setSelectedCart }) => {
+const NavBar = ({ section, setSection, setSelectedCart, menuItems }) => {
 
-    const menuItems = ['Home', 'Movies', 'TV Shows']
     const [openMenu, setOpenMenu] = useState(false);
 
     const handleMenu = (item) => {

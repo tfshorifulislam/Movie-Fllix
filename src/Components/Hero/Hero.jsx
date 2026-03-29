@@ -1,13 +1,13 @@
 import React from 'react';
 import bg from '../../assets/hero-bg.jpg'
 import NavBar from '../Navbar/NavBar';
-const Hero = ({section, setSection, setSelectedCart}) => {
+const Hero = ({section, setSection, setSelectedCart, menuItems}) => {
     return (
         <div>
             <div className='w-full h-screen relative'
                 style={{ backgroundImage: `url(${bg})` }}>
                 <div className='z-20 relative'>
-                     <NavBar section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
+                     <NavBar menuItems={menuItems} section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
                 </div>
                 <div className="absolute z-10 inset-0 bg-black/50   flex flex-col justify-center items-center">
                     <h1 className='text-white text-center font-bold md:font-black text-4xl md:text-7xl md:leading-20 rounded-2xl md:rounded-4xl mt-20 md:mt-0'>

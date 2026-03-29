@@ -6,6 +6,7 @@ import NavBar from './Components/Navbar/NavBar'
 import MovieSection from './Components/MovieSection/MovieSection'
 import TvShowsSection from './Components/TvShowsSection/TvShowsSection'
 import SelectCarts from './Components/SelectCarts/SelectCarts'
+import Footer from './Components/Footer/Footer'
 
 
 const data = async () => {
@@ -17,6 +18,7 @@ const movieDataRes = data()
 
 function App() {
 
+  const menuItems = ['Home', 'Movies', 'TV Shows']
   const [section, setSection] = useState('Home')
   const [cartsData, setCartsData] = useState([])
   const [selectCarts, setSelectedCart] = useState(false)
@@ -24,12 +26,14 @@ function App() {
   // console.log(selectCarts)
   return (
     <div className='max-w-480'>
-      <Hero section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
+      <Hero menuItems={menuItems} section={section} setSection={setSection} setSelectedCart={setSelectedCart} />
 
       {!selectCarts && section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
       {!selectCarts && section === 'Movies' && <MovieSection setSection={setSection} />}
       {!selectCarts && section === 'TV Shows' && <TvShowsSection setSection={setSection} />}
       {selectCarts === true && <SelectCarts cartsData={cartsData} setSection={setSection} setSelectedCart={setSelectedCart} />}
+
+      <Footer menuItems={menuItems} />
 
 
     </div>
