@@ -16,7 +16,7 @@ const SelectedCardMap = ({ cartsData }) => {
                                 <div className="card-body">
                                     <h2 className="card-title">{i.title}</h2>
                                     <p>{i.description}</p>
-                                    <button className="btn bg-purple-700 text-white w-full">Your Favourite Item</button>
+                                    <div><button className="btn bg-red-500 text-white">Remove from Cart</button></div>
                                 </div>
                             </div>
                         </div>

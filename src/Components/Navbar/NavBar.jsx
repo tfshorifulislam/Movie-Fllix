@@ -28,7 +28,7 @@ const NavBar = ({ section, setSection, setSelectedCart, menuItems }) => {
                                             onClick={() => handleMenu(item)}
                                             className={` px-5 py-2 rounded-full cursor-pointer duration-1000 text-white
                                                 ${section === item ?
-                                                    'bg-purple-700  font-bold'
+                                                    'bg-red-500  font-bold'
                                                     : ''}`}
                                         >{item}
                                         </button>
@@ -37,7 +37,7 @@ const NavBar = ({ section, setSection, setSelectedCart, menuItems }) => {
                         </ul>
                     </div>
                     <div className='flex items-center'>
-                        <button className="btn btn-neutral bg-purple-600 border-none ">Sign In</button>
+                        <button className="btn btn-neutral bg-red-500 border-none ">Sign In</button>
 
                         <IoMenu
                             onClick={() => setOpenMenu(!openMenu)}

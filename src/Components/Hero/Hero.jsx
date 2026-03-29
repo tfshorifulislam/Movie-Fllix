@@ -22,7 +22,7 @@ const Hero = ({section, setSection, setSelectedCart, menuItems}) => {
                             </label>
                             <div className="validator-hint hidden">Enter valid email address</div>
                         </div>
-                        <button className="btn bg-purple-700 text-white border-none shadow-none">Get Started</button>
+                        <button className="btn bg-red-500 text-white border-none shadow-none">Get Started</button>
                     </div>
                 </div>
             </div>

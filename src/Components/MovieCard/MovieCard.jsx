@@ -7,6 +7,7 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
         setAddCart(true)
         setCartsData(cartsData + 1)
         setCartsData([...cartsData, movie])
+
         toast.info(`${movie.title} Add Successfully`)
     }
     return (
@@ -24,14 +25,14 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
 
 
                     </div>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex justify-between gap-3 items-center'>
                         <button
                             onClick={() => handleCard()}
                             disabled={addCart ? true : false}
-                            className={`btn  text-white shadow-2xl duration-500
+                            className={`btn  text-white shadow-2xl duration-500 
                                 ${addCart === true ?
                                     'bg-gray-500'
-                                    : 'bg-purple-700'
+                                    : 'bg-red-500'
                                 }`}>
                             {
                                 addCart === true ?
@@ -39,7 +40,7 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
                                     : 'Add to Cart'
                             }
                         </button>
-                        <p className='font-bold py-2 px-3 rounded-md border'>Download: ${movie.price}</p>
+                        <p className='font-bold p-2 rounded-md border'>Download:${movie.price}</p>
                     </div>
                 </div>
             </div>
