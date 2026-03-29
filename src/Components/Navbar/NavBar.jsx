@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/plex-167.png'
+import logo from '../../assets/logo 3.png'
 const NavBar = ({ section, setSection , setSelectedCart }) => {
 
     const menuItems = ['Home', 'Movies', 'TV Shows']
@@ -10,9 +10,10 @@ const NavBar = ({ section, setSection , setSelectedCart }) => {
     }
     return (
         <div className=''>
-            <div className='flex justify-between items-center pt-3 md:pt-8  w-11/12 mx-auto'>
-                <div className='flex w-8 h-8'>
-                    <img src={logo} alt="" />
+            <div className='flex justify-between items-center pt-3 md:pt-8 w-11/12 mx-auto'>
+                <div className='flex w-25 h-auto'>
+                    <img src={logo} alt="" /> 
+                    
                 </div>
                 <div className='flex md:justify-between gap-4  items-center'>
                     <div className='hidden md:flex'>
