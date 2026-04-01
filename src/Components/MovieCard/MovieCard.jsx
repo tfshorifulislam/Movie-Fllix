@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const MovieCard = ({ movie, cartsData, setCartsData }) => {
-    const [addCart, setAddCart] = useState(false)
+    const isExist = cartsData.find(i => i.id === movie.id)
     const handleCard = () => {
-        setAddCart(true)
-        setCartsData(cartsData + 1)
-        setCartsData([...cartsData, movie])
-
-        toast.info(`${movie.title} Add Successfully`)
+        if (isExist) {
+            toast('Already added');
+            return;
+        }
+        else {
+            setCartsData([...cartsData, movie])
+            toast.info(`${movie.title} Add Successfully`)
+        }
     }
+    
     return (
         <div>
             <div>
@@ -28,14 +32,13 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
                     <div className='flex justify-between gap-3 items-center'>
                         <button
                             onClick={() => handleCard()}
-                            disabled={addCart ? true : false}
                             className={`btn  text-white shadow-2xl duration-500 
-                                ${addCart === true ?
+                                ${isExist ?
                                     'bg-gray-500'
                                     : 'bg-red-500'
                                 }`}>
                             {
-                                addCart === true ?
+                                isExist ?
                                     'Success'
                                     : 'Add to Cart'
                             }
@@ -44,7 +47,6 @@ const MovieCard = ({ movie, cartsData, setCartsData }) => {
                     </div>
                 </div>
             </div>
-            {/* <ToastContainer /> */}
         </div>
     );
 };

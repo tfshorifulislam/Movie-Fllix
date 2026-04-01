@@ -22,7 +22,7 @@ function App() {
   const [section, setSection] = useState('Home')
   const [cartsData, setCartsData] = useState([])
   const [selectCarts, setSelectedCart] = useState(false)
-  // console.log(cartsData)
+  console.log(cartsData)
   // console.log(selectCarts)
   return (
     <div className='max-w-480'>
