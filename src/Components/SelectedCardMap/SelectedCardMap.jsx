@@ -1,9 +1,11 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const SelectedCardMap = ({ cartsData, setCartsData }) => {
     const handleRemove = (id) => {
         const removeFromCart = cartsData.filter(i => i.id !== id)
         setCartsData(removeFromCart)
+        toast.success('Successfully Remove')
     }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-10 w-11/12 mx-auto'>
