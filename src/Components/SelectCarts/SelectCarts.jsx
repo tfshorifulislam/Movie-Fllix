@@ -2,7 +2,7 @@ import React from 'react';
 import SelectedCardMap from '../SelectedCardMap/SelectedCardMap';
 import { GrRadialSelected } from "react-icons/gr";
 
-const SelectCarts = ({ cartsData, setSection, setSelectedCart }) => {
+const SelectCarts = ({ cartsData,setCartsData, setSection, setSelectedCart }) => {
     return (
         <div>
 
@@ -21,7 +21,7 @@ const SelectCarts = ({ cartsData, setSection, setSelectedCart }) => {
                             Your Selected card <GrRadialSelected className='text-red-500 animate-pulse' />
 
                         </div>
-                        <SelectedCardMap cartsData={cartsData} />
+                        <SelectedCardMap cartsData={cartsData} setCartsData={setCartsData} />
                     </div>
             }
         </div>

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const SelectedCardMap = ({ cartsData }) => {
+const SelectedCardMap = ({ cartsData, setCartsData }) => {
+    const handleRemove = (id) => {
+        const removeFromCart = cartsData.filter(i => i.id !== id)
+        setCartsData(removeFromCart)
+    }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-10 w-11/12 mx-auto'>
             {
@@ -16,7 +20,13 @@ const SelectedCardMap = ({ cartsData }) => {
                                 <div className="card-body">
                                     <h2 className="card-title">{i.title}</h2>
                                     <p>{i.description}</p>
-                                    <div><button className="btn bg-red-500 text-white">Remove from Cart</button></div>
+                                    <div>
+                                        <button
+                                            onClick={() => handleRemove(i.id)}
+                                            className="btn bg-red-500 text-white">
+                                            Remove from Cart
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

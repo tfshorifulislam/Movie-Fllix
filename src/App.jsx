@@ -31,7 +31,7 @@ function App() {
       {!selectCarts && section === 'Home' && <MovieData movieDataRes={movieDataRes} cartsData={cartsData} setCartsData={setCartsData} selectCarts={selectCarts} setSelectedCart={setSelectedCart} />}
       {!selectCarts && section === 'Movies' && <MovieSection setSection={setSection} />}
       {!selectCarts && section === 'TV Shows' && <TvShowsSection setSection={setSection} />}
-      {selectCarts === true && <SelectCarts cartsData={cartsData} setSection={setSection} setSelectedCart={setSelectedCart} />}
+      {selectCarts === true && <SelectCarts cartsData={cartsData} setCartsData={setCartsData} setSection={setSection} setSelectedCart={setSelectedCart} />}
 
       <Footer menuItems={menuItems} />
 
